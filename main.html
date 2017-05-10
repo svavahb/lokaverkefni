@@ -1,0 +1,53 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+	<title>Lokaverkefni 2017</title>
+
+	<script type="text/javascript" src="js/phaser.min.js"></script>
+	<script type="text/javascript" src="js/phaser-input/build/phaser-input.js"></script>
+    <script type="text/javascript" src="src/boot.js"></script>
+	<script type="text/javascript" src="src/preload.js"></script>
+	<script type="text/javascript" src="src/mainmenu.js"></script>
+	<script type="text/javascript" src="src/level1.js"></script>
+	<script type="text/javascript" src="src/betweenlevels.js"></script>
+	<script type="text/javascript" src="src/level2.js"></script>
+	<script type="text/javascript" src="src/gameover.js"></script>
+	<script type="text/javascript" src="src/gamewon.js"></script>
+	<script type="text/javascript" src="src/gamefinish.js"></script>
+	<script type="text/javascript" src="src/highscore.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+    <body>
+	    <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+	    	<script type="text/javascript">
+				(function() {
+					var game = new Phaser.Game(800, 600, Phaser.CANVAS, "game");
+					game.state.add("Boot",boot);
+					game.state.add("Preload",preload);
+					game.state.add("MainMenu",mainMenu);
+					game.state.add("Level1",level1);
+					game.state.add("BetweenLevels",betweenLevels);
+					game.state.add("Level2",level2);
+					game.state.add("GameOver", gameOver);
+					game.state.add("GameWon",gameWon);  
+					game.state.add("GameFinish",gameFinish);
+					game.state.add("HighScore", highscore);
+					game.state.start("Boot");  
+				})(); 
+			</script>
+		<!--<div class="col-md-4">
+			<h1>Welcome to the world of Gunnerkrigg Court!</h1>
+			<p>You play as the ancient fox-god Reynardine, trapped in the body of a small wolf plushie in the possession of a young girl named Antimony, a student at the Gunnerkrigg Court school. Find your way out of the Gillitie Woods, across the Annan Waters river and over to the court, where you will have to avoid obstacles and fight robots to get to your beloved friend Annie. Since Reynardine is a god, he can access the Aether, a spirit world on top of ours where items and platforms are hidden. Switch between the real world and the Aether to find them!</p>
+			<p>Controls: Arrow keys for moving right and left, jumping up, and crouching down on four feet.</p>
+			<p>Use the S-key to switch between dimensions. Tip: If you're stuck and not sure what to do or where to go, switch!</p>
+			<p>Take your time to collect scorepoints, but remember, the clock is ticking!</p>
+		</div>-->
+    </body>
+</html>
